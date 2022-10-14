@@ -41,6 +41,7 @@ public class PostController {
         PostSingleResponse response = new PostSingleResponse();
         response.setDto(postDto);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
+
     }
 
 }
