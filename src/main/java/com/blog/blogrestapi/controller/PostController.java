@@ -34,6 +34,7 @@ public class PostController {
 
         return postResponse;
     }
+
     @PostMapping()
     public ResponseEntity<PostSingleResponse> createPost(@RequestBody CreatePostRequestDto dto) {
         PostDto postDto = postService.createPost(dto);
