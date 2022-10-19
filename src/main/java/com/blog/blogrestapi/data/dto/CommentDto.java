@@ -6,11 +6,13 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 
 @Getter @Setter
-public class PostDto {
+public class CommentDto {
 
     private Long id;
-    private String title;
+    private Long postId;
     private String body;
+    private String userIp;
+    private Integer parentsId;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 

@@ -1,15 +1,18 @@
 package com.blog.blogrestapi.service;
 
 import com.blog.blogrestapi.data.dto.PostDto;
-import com.blog.blogrestapi.data.dto.request.CreatePostRequestDto;
-import com.blog.blogrestapi.data.entity.Post;
-import com.blog.blogrestapi.data.repository.PostRepository;
-
-import java.util.List;
+import com.blog.blogrestapi.data.dto.PostResponse;
 
 public interface PostService {
-    List<PostDto> getPosts();
 
-    PostDto createPost(CreatePostRequestDto dto);
+    PostDto createPost(PostDto dto);
+
+    PostResponse getAllPosts(Integer pageNo, Integer pageSize, String sortBy, String sortDir);
+
+    PostDto getPostById(Long id);
+
+    PostDto updatePost(PostDto dto, Long id);
+
+    void deletePostById(Long id);
 
 }
